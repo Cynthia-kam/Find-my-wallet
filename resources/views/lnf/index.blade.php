@@ -124,7 +124,7 @@
                               @foreach ($items as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{$item->description}}</td>
+                                    <td><a href="{{url('lnf/details/'. $item->id)}}" >{{$item->description}}</a></td>
                                     <td>{{$item->created_at}}</td>
                                     <td>{{$item->phone}}</td>
                                 </tr>

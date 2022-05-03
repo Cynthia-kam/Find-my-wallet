@@ -20,16 +20,33 @@
 <div class="card col mt-4" id="card">
   <div class="card-header" id="header"><h5>Details of what's inside</h5></div>
   <div class="card-body">
-  
+ 
         <div class="card-body">
-        <h6 class="card-title">ID card no : </h6>
-        <h6 class="card-title">Insurance card no : </h6>
-        <h6 class="card-title">Passport card no : </h6>
-         <h6 class="card-title">Driving license card no : </h6>
-          <h6 class="card-title">Employee card no : </h6>
-           <h6 class="card-title">Student card no : </h6>
-        
+          @if(!empty($items->national_id))
+        <h6 class="card-title">ID card no :{{$items->national_id}} </h6>
+          @endif
+
+          @if(!empty($items->insurance_id))
+        <h6 class="card-title">Insurance card no :{{$items->insurance_id}} </h6>
+          @endif
+
+          @if(!empty($items->passport_number))
+        <h6 class="card-title">Passport card no :{{$items->passport_number}} </h6>
+          @endif
+
+          @if(!empty($items->driving_licence_id))
+         <h6 class="card-title">Driving license card no :{{$items->driving_licence_id}} </h6>
+          @endif
+
+          @if(!empty($items->employee_id))
+          <h6 class="card-title">Employee card no :{{$items->employee_id}} </h6>
+          @endif
+
+          @if(!empty($items->student_id))
+           <h6 class="card-title">Student card no : {{$items->student_id}}</h6>
+          @endif
   </div>
+  
   <div class="btn btn-success text-white rounded">claim</div>
   <div class="btn btn-success rounded"><a class="text-white" href="http://lnf.test/lnf/index">Back</a></div>    
     </hr>

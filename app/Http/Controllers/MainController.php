@@ -36,8 +36,10 @@ class MainController extends Controller
         return view('lnf.found');
 
     }
-    function details(){
-        return view('lnf.details');
+    function details($id){
+        $items = Found::find($id);
+        return view('lnf.details',['items'=>$items]);
+        
     }
     //saving lost item information into the database
     function savelost(Request $request){

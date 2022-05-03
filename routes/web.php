@@ -26,4 +26,4 @@ Route::get('/lnf/found',[MainController::class,'found'])->name('lnf.found');
 Route::post('/lnf/savelost',[MainController::class,'savelost'])->name('savelost');
 Route::post('/lnf/savefound',[MainController::class,'savefound'])->name('savefound');
 Route::get('/lnf/index',[MainController::class,'index'])->name('lnf.index');
-Route::get('/lnf/details',[MainController::class,'details'])->name('lnf.details');
+Route::get('/lnf/details/{id}',[MainController::class,'details'])->name('lnf.details');
